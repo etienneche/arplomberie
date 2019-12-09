@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_08_120034) do
+ActiveRecord::Schema.define(version: 2019_12_09_165633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,11 +27,28 @@ ActiveRecord::Schema.define(version: 2019_12_08_120034) do
     t.index ["user_id"], name: "index_appointements_on_user_id"
   end
 
+  create_table "materials", force: :cascade do |t|
+    t.integer "price"
+    t.text "description"
+    t.integer "quantity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "problems", force: :cascade do |t|
     t.text "description"
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "problems_materials", force: :cascade do |t|
+    t.bigint "problem_id", null: false
+    t.bigint "material_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["material_id"], name: "index_problems_materials_on_material_id"
+    t.index ["problem_id"], name: "index_problems_materials_on_problem_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,10 +62,13 @@ ActiveRecord::Schema.define(version: 2019_12_08_120034) do
     t.text "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "appointements", "problems"
   add_foreign_key "appointements", "users"
+  add_foreign_key "problems_materials", "materials"
+  add_foreign_key "problems_materials", "problems"
 end
