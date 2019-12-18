@@ -1,10 +1,29 @@
-.container-tasks {
-
+h1 {
+  text-align: center;
+}
+.wrapper-tasks {
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 50px;
 }
 .row-tasks {
 
 }
- {
-
-border: 1px solid black;
+h3 {
+padding: 5px;
+margin: 8px
+}
+.col-sm {
+  margin: 10px;
+  background-color: lightgray;
+}
+.col-sm li {
+  margin-bottom: 8px;
+  justify-content: space-between;
+  display: flex;
+}
+.col-sm li input {
+  margin-top: 5px;
 }

@@ -1,0 +1,31 @@
+
+
+.wrapper {
+  width: 40%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  margin-top: 50px;
+  opacity: .9;
+}
+.container {
+  margin-top: 50px;
+  background-color: white;
+}
+h2 {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  color: green;
+  text-align-last: center;
+}
+// BUTTON FORM _button.scss
+
+
+// LINKS
+.container a {
+  display: flex;
+  justify-content: center;
+}
+.container a:hover {
+  color: red;
+  text-decoration: none;
+}

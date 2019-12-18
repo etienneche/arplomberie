@@ -1,1 +1,15 @@
 // Specific CSS for your home-page
+h1 {
+  color: white;
+}
+.container-head {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('table_tools');
+}
+// LIST CONTACT
+.container-contact ul {
+  height: 200px;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
