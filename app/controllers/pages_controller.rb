@@ -3,4 +3,8 @@
 
       def home
       end
+
+      def appointements
+
+      end
     end
