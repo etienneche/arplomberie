@@ -4,7 +4,7 @@
 
 }
 .btn:hover {
-  background-color: blue;
+  background-color: lightblue;
 }
 
 // Main page btn
@@ -12,5 +12,21 @@
   padding: 10px 16px;
   margin: 10px 16px;
   opacity: 0.9;
+  margin-top: 20%;
+  border-radius: 2px;
+}
+.container-head button:hover {
 
+
+}
+.container-head a:hover {
+  text-decoration: none;
+
+}
+
+.btn-home {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  width: 100%;
 }
