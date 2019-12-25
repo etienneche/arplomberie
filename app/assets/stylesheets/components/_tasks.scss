@@ -1,6 +1,7 @@
-h1 {
-  text-align: center;
+#title h1 {
+  color: black;
 }
+h1
 .wrapper-tasks {
     padding: 20px;
     width: 80%;
@@ -27,3 +28,9 @@ margin: 8px
 .col-sm li input {
   margin-top: 5px;
 }
+.appointement {
+  width: 100%;
+  border: 1px solid;
+  background-color: lightgray;
+}
+
